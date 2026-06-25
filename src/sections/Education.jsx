@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { GraduationCap, Calendar } from "lucide-react";
+import { GraduationCap, Calendar, MapPin } from "lucide-react";
 import { education } from "../data/content";
 
 const cardVariants = {
@@ -61,6 +61,10 @@ export default function Education() {
                         <div className="flex items-center gap-1">
                           <Calendar size={14} />
                           <span>{edu.period}</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <MapPin size={14} />
+                          <span>{edu.location}</span>
                         </div>
                       </div>
                     </div>
