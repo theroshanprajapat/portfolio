@@ -1,0 +1,16 @@
+@import "./styles/variables.css";
+@import "./styles/global.css";
+@import "./styles/animations.css";
+@import "./styles/layout.css";
+@import "./styles/buttons.css";
+@import "./styles/utils.css";
+@import "./styles/navbar.css";
+@import "./styles/about.css";
+@import "./styles/education.css";
+@import "./styles/footer.css";
+@import "./styles/experience.css";
+@import "./styles/projects.css";
+@import "./styles/skills.css";
+@import "./styles/achievements.css";
+@import "./styles/volunteering.css";
+@import "./styles/contact.css";

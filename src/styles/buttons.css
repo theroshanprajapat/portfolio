@@ -1,0 +1,48 @@
+@import '../styles/variables.css';
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.1rem;
+  border-radius: 999px;
+  font-weight: var(--weight-bold);
+  transition: all 0.35s var(--ease-premium);
+  cursor: pointer;
+  border: none;
+  font-size: var(--text-md);
+  font-family: inherit;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: var(--white);
+  box-shadow: 0 16px 35px rgba(139, 92, 246, 0.28);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-light);
+  box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.3), 0 4px 6px -2px rgba(99, 102, 241, 0.15);
+}
+
+.btn-outline {
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  min-width: 3.15rem;
+  min-height: 3.15rem;
+  backdrop-filter: blur(18px);
+}
+
+.btn-outline:hover {
+  border-color: var(--border-strong);
+  background-color: var(--bg-card);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-soft);
+}
+
+.btn-outline-secondary:hover {
+  border-color: var(--secondary);
+  background-color: rgba(6, 182, 212, 0.1);
+}

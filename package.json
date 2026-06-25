@@ -1,0 +1,42 @@
+{
+  "name": "roshanprajapat",
+  "version": "0.0.0",
+  "private": true,
+  "description": "portfolio",
+  "homepage": "https://github.com/theroshanprajapat/portfolio-#readme",
+  "bugs": {
+    "url": "https://github.com/theroshanprajapat/portfolio-/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theroshanprajapat/portfolio-.git"
+  },
+  "license": "ISC",
+  "author": "Roshan Prajapat",
+  "type": "module",
+  "main": "eslint.config.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "framer-motion": "^11.0.0",
+    "lucide-react": "^0.511.0",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "eslint": "^10.3.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.6.0",
+    "vite": "^8.0.12"
+  }
+}
