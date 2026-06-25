@@ -87,7 +87,7 @@ export const experience = [
 export const projects = [
   {
     id: 1,
-    title: "PilloDrop",
+    title: "PillowDrop",
     description:
       "Engineered a robust full-stack application using Node.js, Express.js, and MongoDB with dynamic EJS templating. Designed scalable RESTful APIs featuring secure, session-based authentication and robust middleware for data validation and route authorization. Enhanced user experience by integrating Mapbox for interactive geocoding and Cloudinary for seamless cloud image management.",
     techStack: [
