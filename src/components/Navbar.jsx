@@ -51,7 +51,7 @@ export default function Navbar() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
-        className="navbar"
+        className="navbar glass-effect"
       >
         <div className="navbar-container">
           <a href="#about" className="navbar-brand">
