@@ -1,70 +1,7 @@
-import { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { Github, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
+import { Github, ExternalLink } from "lucide-react";
 import { projects } from "../data/content";
-
-function ProjectCarousel({ images }) {
-  const carouselRef = useRef(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(true);
-
-  const updateScrollState = () => {
-    const el = carouselRef.current;
-    if (!el) return;
-    setCanScrollLeft(el.scrollLeft > 0);
-    setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 1);
-  };
-
-  const scroll = (direction) => {
-    const el = carouselRef.current;
-    if (!el) return;
-    const amount = el.clientWidth * 0.7;
-    el.scrollBy({
-      left: direction === "left" ? -amount : amount,
-      behavior: "smooth",
-    });
-  };
-
-  return (
-    <div className="project-carousel">
-      <div
-        className="project-carousel-track"
-        ref={carouselRef}
-        onScroll={updateScrollState}
-      >
-        {images.map((src, i) => (
-          <img
-            key={i}
-            src={src}
-            alt={`Project screenshot ${i + 1}`}
-            className="project-carousel-slide"
-            draggable={false}
-          />
-        ))}
-      </div>
-      {canScrollLeft && (
-        <button
-          type="button"
-          className="carousel-btn carousel-btn-left"
-          onClick={() => scroll("left")}
-          aria-label="Previous image"
-        >
-          <ChevronLeft size={20} />
-        </button>
-      )}
-      {canScrollRight && (
-        <button
-          type="button"
-          className="carousel-btn carousel-btn-right"
-          onClick={() => scroll("right")}
-          aria-label="Next image"
-        >
-          <ChevronRight size={20} />
-        </button>
-      )}
-    </div>
-  );
-}
+import ProjectGallery from "../components/ProjectGallery";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -100,7 +37,7 @@ export default function Projects() {
               className="project-card"
             >
               <div className="project-body">
-                <ProjectCarousel images={project.images} />
+                <ProjectGallery images={project.images} title={project.title} />
                 <div className="project-header">
                   <h3 className="project-title">{project.title}</h3>
                   <div className="project-links">

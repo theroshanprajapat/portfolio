@@ -126,11 +126,51 @@
 }
 
 .project-carousel-slide {
+  position: relative;
   flex: 0 0 100%;
   scroll-snap-align: start;
   width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: var(--bg-secondary);
+  cursor: zoom-in;
+  overflow: hidden;
+}
+
+.project-carousel-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
   object-fit: cover;
   pointer-events: none;
+  transition: transform 0.5s var(--ease-premium);
+}
+
+.project-carousel-slide:hover img {
+  transform: scale(1.05);
+}
+
+.iv-expand-hint {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(8, 11, 16, 0.38);
+  color: var(--white);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-carousel-slide:hover .iv-expand-hint,
+.project-carousel-slide:focus-visible .iv-expand-hint {
+  opacity: 1;
+}
+
+.project-carousel-slide:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: -2px;
 }
 
 .carousel-btn {

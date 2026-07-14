@@ -4,10 +4,13 @@ import './index.css'
 import App from './App.jsx'
 
 const savedTheme = localStorage.getItem("theme");
-if (savedTheme) {
+if (savedTheme === "light" || savedTheme === "dark") {
   document.documentElement.setAttribute("data-theme", savedTheme);
-} else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-  document.documentElement.setAttribute("data-theme", "dark");
+} else {
+  document.documentElement.setAttribute(
+    "data-theme",
+    window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light",
+  );
 }
 
 createRoot(document.getElementById('root')).render(

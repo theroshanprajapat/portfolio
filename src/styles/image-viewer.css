@@ -1,0 +1,275 @@
+@import "../styles/variables.css";
+
+.image-viewer-overlay {
+  position: fixed !important;
+  inset: 0 !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 100 !important;
+  max-width: 100% !important;
+  max-height: 100 !important;
+  margin: 0 !important;
+  padding: clamp(1rem, 4vw, 3rem);
+  z-index: 2147483647 !important;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(4, 7, 12, 0.86);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+:root[data-theme="light"] .image-viewer-overlay {
+  background: rgba(16, 24, 40, 0.6);
+}
+
+.iv-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  touch-action: none;
+  border-radius: var(--radius-sm);
+}
+
+.iv-slider-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.45s var(--ease-premium);
+  will-change: transform;
+}
+
+.iv-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.iv-slide-img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-premium);
+  user-select: none;
+  -webkit-user-drag: none;
+  transform-origin: center center;
+  transition: transform 0.18s var(--ease-premium);
+  will-change: transform;
+}
+
+.iv-close {
+  position: absolute;
+  top: clamp(1rem, 2.5vw, 1.75rem);
+  right: clamp(1rem, 2.5vw, 1.75rem);
+  z-index: 6;
+  width: 2.75rem;
+  height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.25s var(--ease-premium);
+}
+
+.iv-close:hover {
+  color: var(--danger);
+  border-color: var(--border-strong);
+  transform: rotate(90deg);
+}
+
+.iv-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 6;
+  width: 3rem;
+  height: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.25s var(--ease-premium);
+}
+
+.iv-nav-left {
+  left: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+.iv-nav-right {
+  right: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+.iv-nav:hover {
+  color: var(--secondary);
+  border-color: var(--border-strong);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.iv-counter {
+  position: absolute;
+  top: clamp(1rem, 2.5vw, 1.75rem);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 6;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+  font-size: var(--text-sm);
+  letter-spacing: 0.02em;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.iv-counter span {
+  color: var(--text-muted);
+}
+
+.iv-toolbar {
+  position: absolute;
+  bottom: clamp(1rem, 3vw, 2rem);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.iv-tool-btn {
+  width: 2.25rem;
+  height: 2.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.iv-tool-btn:hover:not(:disabled) {
+  color: var(--primary);
+  background: var(--bg-card);
+}
+
+.iv-tool-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.iv-zoom-level {
+  min-width: 3.25rem;
+  text-align: center;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+.iv-thumbs {
+  position: absolute;
+  bottom: clamp(4.5rem, 9vw, 6rem);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 6;
+  display: flex;
+  gap: 0.5rem;
+  max-width: 90vw;
+  overflow-x: auto;
+  padding: 0.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  scrollbar-width: none;
+}
+
+.iv-thumbs::-webkit-scrollbar {
+  display: none;
+}
+
+.iv-thumb {
+  flex: 0 0 auto;
+  width: 3.5rem;
+  height: 3.5rem;
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: transparent;
+  cursor: pointer;
+  opacity: 0.55;
+  transition: all 0.2s ease;
+}
+
+.iv-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.iv-thumb:hover {
+  opacity: 1;
+}
+
+.iv-thumb.active {
+  opacity: 1;
+  border-color: var(--primary);
+}
+
+@media (max-width: 640px) {
+  .iv-nav {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .iv-close {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .iv-thumb {
+    width: 3rem;
+    height: 3rem;
+  }
+}
