@@ -1,4 +1,4 @@
-@import '../styles/variables.css';
+@import "../styles/variables.css";
 
 .achievements-grid {
   display: grid;
@@ -18,7 +18,9 @@
   border-radius: var(--radius-lg);
   padding: var(--space-card);
   text-align: center;
-  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px) !important;
+  backdrop-filter: blur(18px) !important;
+  transform: translateZ(0);
   transition: all 0.35s var(--ease-premium);
 }
 

@@ -18,7 +18,9 @@
   border-radius: var(--radius-lg);
   background: var(--bg-card);
   padding: var(--space-card);
-  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px) !important;
+  backdrop-filter: blur(18px) !important;
+  transform: translateZ(0);
   box-shadow: var(--shadow-soft);
 }
 

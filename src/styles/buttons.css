@@ -1,4 +1,4 @@
-@import '../styles/variables.css';
+@import "../styles/variables.css";
 
 .btn {
   display: inline-flex;
@@ -23,7 +23,9 @@
 
 .btn-primary:hover {
   background-color: var(--primary-light);
-  box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.3), 0 4px 6px -2px rgba(99, 102, 241, 0.15);
+  box-shadow:
+    0 10px 15px -3px rgba(99, 102, 241, 0.3),
+    0 4px 6px -2px rgba(99, 102, 241, 0.15);
 }
 
 .btn-outline {
@@ -32,7 +34,9 @@
   color: var(--text-primary);
   min-width: 3.15rem;
   min-height: 3.15rem;
-  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px) !important;
+  backdrop-filter: blur(18px) !important;
+  transform: translateZ(0);
 }
 
 .btn-outline:hover {

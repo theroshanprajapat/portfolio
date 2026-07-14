@@ -18,7 +18,9 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px) !important;
+  backdrop-filter: blur(18px) !important;
+  transform: translateZ(0);
   box-shadow: var(--shadow-soft);
   transition: all 0.35s var(--ease-premium);
 }
@@ -189,7 +191,8 @@
   justify-content: center;
   cursor: pointer;
   transition: all 0.25s ease;
-  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px) !important;
+  backdrop-filter: blur(6px) !important;
 }
 
 .carousel-btn-left,
