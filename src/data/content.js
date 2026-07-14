@@ -15,8 +15,9 @@ export const experience = [
     company: "Fynd (Shopsense Retail Technologies Pvt. Ltd.)",
     roles: [
       {
-        title: "SDE - 1",
-        period: "Nov 2021 - Oct 2023",
+        title: "Software Development Engineer - 1",
+        businessUnit: "Catalog.cloud",
+        period: "Oct 2021 - Sep 2023",
         duration: "2 yrs",
         location: "Mumbai",
         techStack: [
@@ -37,8 +38,9 @@ export const experience = [
       },
       {
         title: "Junior Engineer",
-        period: "Jul 2021 - Nov 2021",
-        duration: "5 mos",
+        businessUnit: "Fynd Platform",
+        period: "Jul 2021 - Oct 2021",
+        duration: "3 mos",
         location: "Mumbai",
         techStack: [
           "Front-end Development",
@@ -74,7 +76,7 @@ export const experience = [
           "VueJS",
           "JavaScript",
           "Node.js",
-          "Expres.js",
+          "Express.js",
           "MongoDB",
           "REST APIs",
         ],
@@ -87,6 +89,35 @@ export const experience = [
 export const projects = [
   {
     id: 1,
+    title: "Samvad",
+    description:
+      "Architected a highly secure, zero-knowledge End-to-End Encrypted (E2EE) real-time communication platform utilizing React.js and Node.js. Engineered seamless Peer-to-Peer (P2P) video and audio calling capabilities via WebRTC, alongside a low-latency WebSocket signaling server using Socket.io. Implemented advanced privacy protocols, including AES-GCM cryptography via the Web Crypto API, local key management using IndexedDB, and custom auto-deleting features for ephemeral messages and media. Designed highly secure, in-browser custom renderers for media, ensuring files remain encrypted on third-party cloud storage (Cloudinary) and are only decrypted locally on the client.",
+    techStack: [
+      "React.js",
+      "Vite",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Socket.io",
+      "WebRTC",
+      "Web Crypto API",
+      "IndexedDB",
+      "Cloudinary",
+    ],
+    images: [
+      "https://res.cloudinary.com/dul2oek47/image/upload/v1784028040/Screenshot_2026-07-14_124134_jpejlb.png",
+      "https://res.cloudinary.com/dul2oek47/image/upload/v1784028041/Screenshot_2026-07-14_123134_afnuoe.png",
+      "https://res.cloudinary.com/dul2oek47/image/upload/v1784028039/Screenshot_2026-07-14_164433_pwh4dr.png",
+      "https://res.cloudinary.com/dul2oek47/image/upload/v1784028038/Screenshot_2026-07-14_164456_av0tgr.png",
+      "https://res.cloudinary.com/dul2oek47/image/upload/v1784028038/Screenshot_2026-07-14_124305_gvf6cd.png",
+      "https://res.cloudinary.com/dul2oek47/image/upload/v1784028038/Screenshot_2026-07-14_124325_reqsf5.png",
+      "https://res.cloudinary.com/dul2oek47/image/upload/v1784028037/Screenshot_2026-07-14_124403_nkfy8b.png",
+    ],
+    link: "https://samvad-app.vercel.app/",
+    github: "https://github.com/theroshanprajapat/samvad-frontend",
+  },
+  {
+    id: 2,
     title: "PillowDrop",
     description:
       "Engineered a robust full-stack application using Node.js, Express.js, and MongoDB with dynamic EJS templating. Designed scalable RESTful APIs featuring secure, session-based authentication and robust middleware for data validation and route authorization. Enhanced user experience by integrating Mapbox for interactive geocoding and Cloudinary for seamless cloud image management.",
@@ -121,10 +152,10 @@ export const skills = {
     "Material UI",
     "Tailwind CSS",
   ],
-  backend: ["Node.js", "Expres.js"],
+  backend: ["Node.js", "Express.js"],
   databases: ["MySQL", "MongoDB", "Firebase"],
   cloud: ["AWS EC2", "Amazon S3", "Vercel", "Render"],
-  programming: ["Java", "JavaScript", "C++"],
+  programming: ["Java", "OOPs", "JavaScript", "C++"],
   tools: ["Git", "GitHub", "Hoppscotch", "Postman"],
 };
 

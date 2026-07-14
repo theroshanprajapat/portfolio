@@ -6,6 +6,7 @@ export default defineConfig({
   server: {
     host: "0.0.0.0",
     port: 5173,
+    allowedHosts: ["pouncing-anytime-sandstone.ngrok-free.dev"],
   },
   preview: {
     allowedHosts: ["theroshanprajapat.onrender.com"],
