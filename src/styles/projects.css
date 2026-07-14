@@ -16,7 +16,7 @@
   position: relative;
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-sm);
   overflow: hidden;
   -webkit-backdrop-filter: blur(18px) !important;
   backdrop-filter: blur(18px) !important;
@@ -111,7 +111,6 @@
   position: relative;
   margin: calc(var(--space-card) * -1);
   margin-bottom: 1.25rem;
-  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
   overflow: hidden;
 }
 

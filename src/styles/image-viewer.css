@@ -65,7 +65,7 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   box-shadow: var(--shadow-premium);
   user-select: none;
   -webkit-user-drag: none;
